@@ -4,9 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.mateu</groupId>
+    <groupId>com.HandyPerson</groupId>
     <artifactId>HandyPerson</artifactId>
     <version>1.0</version>
+    <packaging>war</packaging>
 
     <name>handyPerson</name>
     <url>http://www.handyperson.com</url>
@@ -16,6 +17,8 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
+
+
 
     <dependencies>
         <dependency>
@@ -31,9 +34,10 @@
             <version>8.0.28</version>
         </dependency>
     </dependencies>
-
     <build>
-        <finalName>amazon</finalName>
+
+        <finalName>handyPerson</finalName>
+
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -47,14 +51,46 @@
                     <artifactId>tomcat7-maven-plugin</artifactId>
                     <version>2.2</version>
                     <configuration>
-                        <url>http://localhost:8080/manager/text</url>
+                        <url>http://localhost:8081/manager/text</url>
                         <server>tomcat8</server>
-                        <path>/amazon</path>
+                        <path>/handyperson</path>
                         <username>tomcat</username>
                         <password>tomcat</password>
                     </configuration>
+
                 </plugin>
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+                <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.0.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.0</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.22.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>3.2.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>2.5.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>2.8.2</version>
+                </plugin>
+
             </plugins>
         </pluginManagement>
+
     </build>
 </project>

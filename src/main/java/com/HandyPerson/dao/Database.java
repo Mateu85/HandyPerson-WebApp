@@ -4,7 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import static com.svalero.webapp.util.Constants.*;
+import static com.HandyPerson.util.Constants.*;
+
 
 
 public class Database {
