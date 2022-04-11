@@ -28,8 +28,8 @@ public class AddTaskServlet extends HttpServlet {
         Task task = new Task(title, description, location);
 
         Database database = new Database();
-        TaskDao bookDao = new TaskDao(database.getConnection());
-        bookDao.add(task);
+        TaskDao taskDao = new TaskDao(database.getConnection());
+        taskDao.add(task);
         out.println("<p style='color:green'>Libro registrado correctamente</p>");
     }
 }

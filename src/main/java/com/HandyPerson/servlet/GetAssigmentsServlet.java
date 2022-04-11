@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.SQLException;
 import java.util.List;
 
 
@@ -27,9 +26,9 @@ public class GetAssigmentsServlet extends HttpServlet {
         Database database = new Database();
         TaskDao taskDao = new TaskDao(database.getConnection());
         out.println("<ul>");
-        List<Task> books = taskDao.findAll();
-        for (Task book : books) {
-            out.println("<li><p><a href='book.jsp?id=" + book.getId() + "'>" + book.getTitle() + "</a></p></li>");
+        List<Task> tasks = taskDao.findAll();
+        for (Task task : tasks) {
+            out.println("<li><p><a href='task.jsp?id=" + task.getId() + "'>" + task.getTitle() + "</a></p></li>");
         }
         out.println("</ul>");
         database.close();
