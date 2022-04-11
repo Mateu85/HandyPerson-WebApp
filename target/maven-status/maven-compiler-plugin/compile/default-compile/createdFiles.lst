@@ -1,2 +1,4 @@
 com/HandyPerson/exception/UserNotFoundException.class
 com/HandyPerson/exception/TaskNotFoundException.class
+com/HandyPerson/servlet/GetAssigmentsServlet.class
+com/HandyPerson/servlet/AddTaskServlet.class
