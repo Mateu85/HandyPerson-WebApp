@@ -19,7 +19,7 @@
 <div class="container w-50">
 
 <form action="addtask" method="post">
-<h2>Register a new assignment into the platform</h2></br>
+<h2 class="text-center text-secondary">Register a new assignment into the platform</h2></br>
 
  <div class="input-group input-group-lg mb-3">
    <div class="input-group-prepend">
