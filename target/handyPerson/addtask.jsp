@@ -23,7 +23,7 @@
 
  <div class="input-group input-group-lg mb-3">
    <div class="input-group-prepend">
-     <span class="input-group-text" id="inputGroup-sizing-lg">Title</span>
+     <span style="width: 135px;" class="input-group-text" id="inputGroup-sizing-lg">Title</span>
    </div>
    <input name="title" id="title" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
  </div>
@@ -31,14 +31,14 @@
 
   <div class="input-group input-group-lg mb-3">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-lg">Description</span>
+      <span style="width: 135px;" class="input-group-text" id="inputGroup-sizing-lg">Description</span>
     </div>
     <input name="description" id="description" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
   </div>
 
   <div class="input-group input-group-lg mb-3">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-lg">Location</span>
+      <span style="width: 135px;" class="input-group-text" id="inputGroup-sizing-lg">Location</span>
     </div>
     <input name="location" id="location" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
   </div>
