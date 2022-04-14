@@ -49,6 +49,21 @@ public class TaskDao {
 
         return false;
     }
+    public static boolean remove(int id) {
+        String sql = "DELETE FROM task WHERE id = ?";
+        try {
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setInt(1, id);
+            int rows = statement.executeUpdate();
+
+            return rows == 1;
+        } catch (SQLException sqle) {
+            System.out.println("No se ha podido conectar con el servidor de base de datos. Comprueba que los datos son correctos y que el servidor se ha iniciado");
+            sqle.printStackTrace();
+        }
+
+        return false;
+    }
 
     public boolean modify(String title, Task task) {
         String sql = "UPDATE task SET title = ?, description = ?, location = ? WHERE title = ?";

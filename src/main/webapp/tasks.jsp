@@ -20,6 +20,7 @@
                     for (Task task : tasks) {
             %>
                         <li class="list-group-item"><a target="_blank" href="task?id=<%= task.getId() %>"><%= task.getTitle() %></a></li>
+                          <a href="delete-book?id=<%= task.getId() %>" class="btn btn-outline-danger">Delete</a>
             <%
                     }
                } catch (SQLException sqle) {
