@@ -9,7 +9,7 @@
             $("form").on("submit", function(event) {
                 event.preventDefault();
                 var formValue = $(this).serialize();
-                $.post("search-task", formValue, function(data) {
+                $.post("search-books", formValue, function(data) {
                     $("#result").html(data);
                 });
             });

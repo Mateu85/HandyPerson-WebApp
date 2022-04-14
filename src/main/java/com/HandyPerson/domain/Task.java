@@ -52,6 +52,11 @@ public class Task extends ArrayList<Task> {
     }
 
     @Override
+    public String toString() {
+        return id+" "+ title + " "+ description + " "+ location;
+    }
+
+    @Override
     public <T> T[] toArray(IntFunction<T[]> generator) {
         return super.toArray(generator);
     }

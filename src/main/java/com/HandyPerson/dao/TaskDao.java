@@ -89,6 +89,30 @@ public class TaskDao {
 
         return tasks;
     }
+    public static ArrayList<Task> findAll(String searchText) {
+        String sql = "SELECT * FROM task WHERE INSTR(title, ?) != 0 OR INSTR(description, ?) != 0 ORDER BY title";
+        ArrayList<Task> tasks = new ArrayList<>();
+        try {
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1, searchText);
+            statement.setString(2, searchText);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                Task task = new Task();
+                task.setId(resultSet.getInt("id"));
+                task.setTitle(resultSet.getString("title"));
+                task.setDescription(resultSet.getString("description"));
+                task.setLocation(resultSet.getString("location"));
+                tasks.add(task);
+            }
+        } catch (SQLException sqle) {
+            System.out.println("\n" +
+                    "Could not connect to the database server. Check that the data is correct and that the server has been started");
+            sqle.printStackTrace();
+        }
+
+        return tasks;
+    }
 
     public Task findByTitle(String title) {
         String sql = "SELECT * FROM task WHERE title = ?";

@@ -27,10 +27,16 @@ public class SearchTask extends HttpServlet {
 
         Database database = new Database();
         TaskDao taskDao = new TaskDao(database.getConnection());
-        Task task = taskDao.findByTitle(searchText);
+
+
+        ArrayList<Task> tasks = taskDao.findAll(searchText);
         StringBuilder result = new StringBuilder("<ul class='list-group'>");
-        result.append("<li class='list-group-item'>").append(task.getTitle()).append("</li>");
+        for (Task task : tasks) {
+            result.append("<li class='list-group-item'>").append(task.getTitle()).append("</li>");
+        }
         result.append("</ul>");
         out.println(result);
+
+
     }
 }
