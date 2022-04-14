@@ -1,6 +1,9 @@
 package com.HandyPerson.domain;
 
-public class Task {
+import java.util.ArrayList;
+import java.util.function.IntFunction;
+
+public class Task extends ArrayList<Task> {
 
     private String title;
     private int id;
@@ -46,5 +49,10 @@ public class Task {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Override
+    public <T> T[] toArray(IntFunction<T[]> generator) {
+        return super.toArray(generator);
     }
 }

@@ -69,16 +69,17 @@ public class TaskDao {
     }
     public static ArrayList<Task> findAll() {
         String sql = "SELECT * FROM task ORDER BY title";
-        ArrayList<Task> task = new ArrayList<>();
+        ArrayList<Task> tasks = new ArrayList<>();
         try {
             PreparedStatement statement = connection.prepareStatement(sql);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                Task tasks = new Task();
-                tasks.setTitle(resultSet.getString("title"));
-                tasks.setDescription(resultSet.getString("description"));
-                tasks.setLocation(resultSet.getString("location"));
-                task.add(tasks);
+                Task task = new Task();
+                task.setId(resultSet.getInt("id"));
+                task.setTitle(resultSet.getString("title"));
+                task.setDescription(resultSet.getString("description"));
+                task.setLocation(resultSet.getString("location"));
+                tasks.add(task);
             }
         } catch (SQLException sqle) {
             System.out.println("\n" +
@@ -86,7 +87,7 @@ public class TaskDao {
             sqle.printStackTrace();
         }
 
-        return task;
+        return tasks;
     }
 
     public Task findByTitle(String title) {
@@ -99,6 +100,7 @@ public class TaskDao {
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
                 task = new Task();
+                task.setId(resultSet.getInt("id"));
                 task.setTitle(resultSet.getString("title"));
                 task.setDescription(resultSet.getString("description"));
                 task.setLocation(resultSet.getString("location"));

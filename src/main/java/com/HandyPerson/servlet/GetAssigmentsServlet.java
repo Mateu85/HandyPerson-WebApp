@@ -35,7 +35,7 @@ public class GetAssigmentsServlet extends HttpServlet {
         List<Task> tasks = taskDao.findAll();
         for (Task task : tasks) {
             out.println("<li style=\"background-color: #e9ecef;;\" class=\"d-flex align-items-start d-flex list-group-item\">");
-            out.println("<a class=\"text-secondary text-decoration-none\" href='book.jsp?id=" + task.getId() + "'>" + task.getTitle() + "</a>");
+            out.println("<a class=\"text-secondary text-decoration-none\" href='task?id=" + task.getId() + "'>" + task.getTitle() + "</a>");
             out.println("</li>");
             out.println("<li class=\"d-flex justify-content-between mb-5 mt-1 \">");
             out.println("<button type=\"button\" class=\"  btn btn-danger\">DELETE</button>");

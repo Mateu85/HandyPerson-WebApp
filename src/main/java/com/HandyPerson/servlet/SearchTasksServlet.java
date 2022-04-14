@@ -13,28 +13,23 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-@WebServlet("/searchAssignment")
-public class SearchaSsigmentServlet extends HttpServlet {
+@WebServlet("/search")
+public class SearchTasksServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        String searchAssignment = request.getParameter("searchAssignment");
-        System.out.println("TESTING:" + searchAssignment);
+        String searchText = request.getParameter("searchtext");
+
         Database database = new Database();
         TaskDao taskDao = new TaskDao(database.getConnection());
-        Task task = taskDao.findByTitle(searchAssignment);
-       /* ArrayList<Task> books = taskDao.findAll();
+        ArrayList<Task> tasks = taskDao.findByTitle(searchText);
         StringBuilder result = new StringBuilder("<ul class='list-group'>");
-        for (Task book : books) {
-            result.append("<li class='list-group-item'>").append(book.getTitle()).append("</li>");
+        for (Task task : tasks) {
+            result.append("<li class='list-group-item'>").append(task.getTitle()).append("</li>");
         }
         result.append("</ul>");
-        out.println(result);*/
-        StringBuilder result = new StringBuilder("<ul class='list-group'>");
-        result.append("<li class='list-group-item'>").append(task.getTitle()).append("</li></ul>");
         out.println(result);
     }
-
 }
