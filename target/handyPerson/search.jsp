@@ -9,13 +9,13 @@
             $("form").on("submit", function(event) {
                 event.preventDefault();
                 var formValue = $(this).serialize();
-                $.post("search-books", formValue, function(data) {
+                $.post("search-tasks", formValue, function(data) {
                     $("#result").html(data);
                 });
             });
         });
     </script>
-    <div class="container">
+    <div class="container W-50">
         <h2>Search</h2>
         <form>
             <div class="mb-2">
