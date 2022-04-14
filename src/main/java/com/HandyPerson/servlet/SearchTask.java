@@ -15,7 +15,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 
-@WebServlet("/search-task")
+@WebServlet("/search-books")
 
 public class SearchTask extends HttpServlet {
 
