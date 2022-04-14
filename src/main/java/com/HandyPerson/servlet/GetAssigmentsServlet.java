@@ -37,12 +37,12 @@ public class GetAssigmentsServlet extends HttpServlet {
             out.println("<li style=\"background-color: #e9ecef;;\" class=\"d-flex align-items-start d-flex list-group-item\">");
             out.println("<a class=\"text-secondary text-decoration-none\" href='task?id=" + task.getId() + "'>" + task.getTitle() + "</a>");
             out.println("</li>");
-            out.println("<li class=\"d-flex justify-content-between mb-5 mt-1 \">");
+            out.println("<li class=\"d-flex justify-content-end mb-5 mt-1 \">");
 
             // <a href="delete-book?id=<%= task.getId() %>" class="btn btn-outline-danger">Delete</a>
-            out.println("<a class=\"text-secondary text-decoration-none\" href='delete-task?id=" + task.getId() + "'> DELETE</a>");
-            out.println("<button type=\"button\" class=\"btn btn-info\">+Info</button>");
-            out.println("<button type=\"button\" class=\"  btn btn-secondary\">MODIFY</button>");
+            out.println("<a class=\"text-danger text-decoration-none\" href='delete-task?id=" + task.getId() + "'> DELETE</a>");
+            //out.println("<button type=\"button\" class=\"btn btn-info\">+Info</button>");
+            //out.println("<button type=\"button\" class=\"  btn btn-secondary\">MODIFY</button>");
             out.println("</li>");
         }
         out.println("</ul>");
