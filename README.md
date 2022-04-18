@@ -1,28 +1,28 @@
-# HandyPerson-WebApp
-Java WebApp Database Connection in Tomcat with MySQL 
 
-# Java WebApp
+# SVALERO
 
-WebApp JAVA => SEAS - Higher Technical Certificate in developing Web applications.
+Actividad de Aprendizaje 2a Evaluación
 
-## Profile
 
-Check My  [LinkedIn](https://www.linkedin.com/in/vicente-mateu-3a17562a/).
+## API Reference
 
-```bash
-#JAVA # 
-```
+#### WebApp Aplication
 
-## Usage
-
-```java
+```http
+  Se ha implementado una aplicación web que gestiona información almacenando y 
+  recupera de una Base de Datos Relacional 
 
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `Dar de alta:` | `string` | Se podrá dar de alta, a través de un formulario web |
+| `Listado:` | `string` | Se podrá listar toda la información  |
+| `Funcionalidad (búsqueda):` | `string` | **Required**. Your API key |
+| `Dar de baja:` | `string` | podrán realizar búsquedas de las 2 entidades  |
+| `Dar de alta:` | `string` | Se podrá dar de baja cualquiera de las entidades existentes |
+| `Repositorio GitHub:` | `string` | Se uso del framework Bootstrap para diseñar la aparencia de la aplicación web |
+| `Funcionalidad (Js):` | `string` | repositorio en GitHub para guardar el código del proyecto |
 
-Please make sure to update tests as appropriate.
+#### Vicente Mateu
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
