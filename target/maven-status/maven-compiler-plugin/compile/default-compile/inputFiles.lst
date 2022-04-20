@@ -2,11 +2,12 @@
 /Users/mateupego85/Desktop/mateus_repo/HandyPerson/src/main/java/com/HandyPerson/domain/Booking.java
 /Users/mateupego85/Desktop/mateus_repo/HandyPerson/src/main/java/com/HandyPerson/domain/Task.java
 /Users/mateupego85/Desktop/mateus_repo/HandyPerson/src/main/java/com/HandyPerson/exception/UserNotFoundException.java
-/Users/mateupego85/Desktop/mateus_repo/HandyPerson/src/main/java/com/HandyPerson/servlet/DeleteTaskServlet.java
 /Users/mateupego85/Desktop/mateus_repo/HandyPerson/src/main/java/com/HandyPerson/dao/TaskDao.java
 /Users/mateupego85/Desktop/mateus_repo/HandyPerson/src/main/java/com/HandyPerson/domain/User.java
+/Users/mateupego85/Desktop/mateus_repo/HandyPerson/src/main/java/com/HandyPerson/servlet/GetTaskServerlet.java
+/Users/mateupego85/Desktop/mateus_repo/HandyPerson/src/main/java/com/HandyPerson/servlet/AddTaskServlet.java
+/Users/mateupego85/Desktop/mateus_repo/HandyPerson/src/main/java/com/HandyPerson/servlet/DeleteTaskServlet.java
 /Users/mateupego85/Desktop/mateus_repo/HandyPerson/src/main/java/com/HandyPerson/dao/Database.java
 /Users/mateupego85/Desktop/mateus_repo/HandyPerson/src/main/java/com/HandyPerson/servlet/SearchTask.java
 /Users/mateupego85/Desktop/mateus_repo/HandyPerson/src/main/java/com/HandyPerson/util/Constants.java
-/Users/mateupego85/Desktop/mateus_repo/HandyPerson/src/main/java/com/HandyPerson/servlet/AddTaskServlet.java
 /Users/mateupego85/Desktop/mateus_repo/HandyPerson/src/main/java/com/HandyPerson/servlet/GetAssigmentsServlet.java

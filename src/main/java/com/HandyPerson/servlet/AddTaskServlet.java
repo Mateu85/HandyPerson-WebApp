@@ -4,7 +4,6 @@ import com.HandyPerson.dao.Database;
 import com.HandyPerson.dao.TaskDao;
 import com.HandyPerson.domain.Task;
 
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,7 +28,8 @@ public class AddTaskServlet extends HttpServlet {
 
         Database database = new Database();
         TaskDao taskDao = new TaskDao(database.getConnection());
+
         taskDao.add(task);
-        out.println("<p style='color:green'>Libro registrado correctamente</p>");
+        out.println("<div class='alert alert-success' role='alert'>El libro se ha registrado correctamente</div>");
     }
 }

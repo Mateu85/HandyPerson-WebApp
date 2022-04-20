@@ -15,7 +15,6 @@ import java.io.PrintWriter;
 import java.util.List;
 
 
-
 @WebServlet("/taskList")
 public class GetAssigmentsServlet extends HttpServlet {
 
@@ -25,8 +24,12 @@ public class GetAssigmentsServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         out.println("<head>\n" +
-                "    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">\n" +
+                " <meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\"> " +
+                "  <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\"> " +
+                " <link href=\"/JavaWebApp/css/style.css\" rel=\"stylesheet\"> " +
                 "</head>");
+        out.println("<body>");
+        out.println("<button type=\"button\" class=\"btn btn-secondary btn-lg btn-block\"onClick=\"parent.location='index.jsp'\">Block level button</button>");
         out.println("<div class='container mt-5 w-25'>");
         out.println("<h5 class=\"text-secondary text-center\">List of Assignments In your Area</h5>");
         Database database = new Database();
@@ -47,6 +50,10 @@ public class GetAssigmentsServlet extends HttpServlet {
         }
         out.println("</ul>");
         out.println("</div>");
+        out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>");
+        out.println("<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>");
+        out.println("<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>");
+        out.println("</body>");
     }
 }
 
