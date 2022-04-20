@@ -8,4 +8,5 @@
         <p><a href="addtask.jsp">Register a new assignment into the platform</a></p>
         <p><a href="search.jsp">Search Assignments In your Area</a></p>
     </body>
+
 </html>
