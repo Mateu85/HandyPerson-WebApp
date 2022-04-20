@@ -152,6 +152,28 @@ public class TaskDao {
         return task;
     }
 
+    public Task findById(int id) {
+        String sql = "SELECT * FROM task WHERE id = ?";
+        Task task = null;
+
+        try {
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setInt(1, id);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                task = new Task();
+                task.setId(resultSet.getInt("id"));
+                task.setTitle(resultSet.getString("title"));
+                task.setDescription(resultSet.getString("description"));
+                task.setLocation(resultSet.getString("location"));
+            }
+        } catch (SQLException sqle) {
+            System.out.println("No se ha podido conectar con el servidor de base de datos. Comprueba que los datos son correctos y que el servidor se ha iniciado");
+            sqle.printStackTrace();
+        }
+
+        return task;
+    }
 }
 
 
