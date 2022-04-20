@@ -2,7 +2,7 @@ package com.HandyPerson.servlet;
 
 import com.HandyPerson.dao.Database;
 import com.HandyPerson.dao.TaskDao;
-import com.HandyPerson.domain.User;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

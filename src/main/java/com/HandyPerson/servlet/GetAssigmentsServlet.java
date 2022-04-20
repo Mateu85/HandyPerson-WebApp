@@ -35,7 +35,8 @@ public class GetAssigmentsServlet extends HttpServlet {
         Database database = new Database();
         TaskDao taskDao = new TaskDao(database.getConnection());
         out.println("<ul class='list-group list-group-flush'>");
-        List<Task> tasks = taskDao.findAll();
+        String searchText = request.getParameter("searchtext");
+        List<Task> tasks = taskDao.findAll(searchText);
         for (Task task : tasks) {
             out.println("<li style=\"background-color: #e9ecef;;\" class=\"d-flex align-items-start d-flex list-group-item\">");
             out.println("<a class=\"text-secondary text-decoration-none\" href='task?id=" + task.getId() + "'>" + task.getTitle() + "</a>");

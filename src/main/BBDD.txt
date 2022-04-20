@@ -1,0 +1,40 @@
+USE handyperson;
+
+CREATE TABLE task (
+ id INT PRIMARY KEY AUTO_INCREMENT,
+title VARCHAR(100) NOT NULL,
+description VARCHAR(500),
+location VARCHAR(50)
+);
+
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50),
+    username VARCHAR(50),
+    password VARCHAR(50),
+    postCode VARCHAR(6),
+    isHandyperson BOOLEAN
+);
+
+CREATE TABLE bookings (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    code VARCHAR(50),
+    paid BOOLEAN,
+    date DATE,
+    user_id INT REFERENCES users (id),
+	task_id INT REFERENCES task (id)
+);
+
+CREATE TABLE hire_handyperson (
+    book_id INT REFERENCES books (id),
+    order_id INT REFERENCES orders (id),
+    PRIMARY KEY (book_id, order_id)
+);
+
+
+
+
+
+
+SELECT * FROM task;
+SELECT * FROM bookings;
