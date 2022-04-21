@@ -24,5 +24,6 @@ Actividad de Aprendizaje 2a Evaluación
 | `Repositorio GitHub:` | `string` | Se uso del framework Bootstrap para diseñar la aparencia de la aplicación web |
 | `Funcionalidad (Js):` | `string` | repositorio en GitHub para guardar el código del proyecto |
 
+[![Image from Gyazo](https://i.gyazo.com/0706acfa8579e4fc65e364cc675f4cf4.gif)](https://gyazo.com/0706acfa8579e4fc65e364cc675f4cf4)
 #### Vicente Mateu
 
