@@ -21,8 +21,8 @@ Actividad de Aprendizaje 2a Evaluación
 | `Funcionalidad (búsqueda):` | `string` | **Required**. Your API key |
 | `Dar de baja:` | `string` | podrán realizar búsquedas de las 2 entidades  |
 | `Dar de alta:` | `string` | Se podrá dar de baja cualquiera de las entidades existentes |
-| `Diseño:` | `string` | Se uso del framework Bootstrap para diseñar la aparencia de la aplicación web |
-| `Vista Detalle:` | `string` | repositorio en GitHub para guardar el código del proyecto |
+| `Repositorio GitHub:` | `string` | Se uso del framework Bootstrap para diseñar la aparencia de la aplicación web |
+| `Funcionalidad (Js):` | `string` | repositorio en GitHub para guardar el código del proyecto |
 
 #### Vicente Mateu
 

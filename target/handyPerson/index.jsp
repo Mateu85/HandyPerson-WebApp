@@ -8,10 +8,18 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>HandyPerson</title>
-    <%@ include file="header.jsp"%>
+    <title>Hello, world!</title>
   </head>
   <body>
+
+
+    <ul class="list-group list-group-flush mt-5 w-25">
+    <h2 class="text-center text-secondary">HandyPerson</h2>
+      <li class="list-group-item"><p><a class="text-decoration-none" href="taskList">Have a look at the Assignments In your Area</a></p></li>
+      <li class="list-group-item"><p><a class="text-decoration-none" href="addtask.jsp">Register a new assignment into the platform</a></p></li>
+      <li class="list-group-item"><p><a class="text-decoration-none" href="search.jsp">Search Assignments In your Area</a></p></li>
+
+    </ul>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
