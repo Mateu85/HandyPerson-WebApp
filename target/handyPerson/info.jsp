@@ -1,8 +1,6 @@
 <%
     String description = request.getParameter("description");
-     String location = request.getParameter("location");
-
-
+    String location = request.getParameter("location");
 
 %>
 
