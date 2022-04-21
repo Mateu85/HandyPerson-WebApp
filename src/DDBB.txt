@@ -1,0 +1,62 @@
+USE handyperson;
+
+CREATE TABLE task (
+ id INT PRIMARY KEY AUTO_INCREMENT,
+title VARCHAR(100) NOT NULL,
+description VARCHAR(500),
+location VARCHAR(50)
+);
+
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50),
+    username VARCHAR(50),
+    password VARCHAR(50),
+    postCode VARCHAR(6),
+    isHandyperson BOOLEAN
+);
+
+CREATE TABLE bookings (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    code VARCHAR(50),
+    paid BOOLEAN,
+    date DATE,
+    user_id INT REFERENCES users (id),
+	task_id INT REFERENCES task (id)
+);
+
+CREATE TABLE hire_handyperson (
+    book_id INT REFERENCES books (id),
+    order_id INT REFERENCES orders (id),
+    PRIMARY KEY (book_id, order_id)
+);
+
+
+INSERT INTO task (
+    title,
+    description,
+    location
+)
+VALUES
+    (
+        'Tile Installation','Sidewalks, exterior walls, driveways, garage floors, roofs, and other surfaces has become caked in dirt and other debris—causing severe discoloration','ES1 HJT'
+    ),
+    (
+       'Deck work','Repairing or installing a deck','QAS 3ER'
+
+    ),
+    (
+       'Window Repair','helping to clean up broken glass and repairing/replacing the window frame, as well as the window itself.','QS1 UHJ'
+    ),
+    (
+      'Small Appliance Repair','I would rather fix a broken appliance than have to replace the whole thing with a new one.','WX1 YUS'
+    ),
+     (
+      'Clean Van ','Need somebody to clean my van once a week','QWE 9TY'
+    ),
+     (
+       'Bake','Need some help to deliver Bread in the morning','QWE 9YU'
+    ),
+     (
+       'Wall To Paint','A wall is 5x 7 m square and needs be printed in white ','SWQ 6RT'
+    );
