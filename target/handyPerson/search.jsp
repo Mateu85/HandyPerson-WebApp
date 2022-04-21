@@ -15,6 +15,9 @@
             });
         });
     </script>
+        <div>
+          <button style="width: 100%;border-radius: 0px !important" type=button class="btn btn-secondary btn-lg btn-block" onClick="parent.location='index.jsp'">Back To Menu</button>
+           <div>
     <div class="container">
         <h2>Search</h2>
         <form>
